@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject deathEffect;
-
-    public float timeScaleDown = 0.1f;
-
     public int health = 10;
     public int damage = 5;
 
@@ -15,7 +11,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            Death();
+            Destroy(gameObject);
         }
     }
 
@@ -30,11 +26,5 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-    }
-
-    private void Death()
-    {
-        Destroy(gameObject);
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
     }
 }
