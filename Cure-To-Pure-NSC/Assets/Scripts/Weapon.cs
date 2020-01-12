@@ -15,7 +15,6 @@ public class Weapon : MonoBehaviour
         // Rotate to mouse.
         Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        Debug.Log(angle);
         transform.eulerAngles = new Vector3(0f, 0f, angle);
 
         // Fire bullets.
