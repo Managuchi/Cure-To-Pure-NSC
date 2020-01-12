@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7258145030830462018}
   - component: {fileID: 7258145030830462019}
   - component: {fileID: 7258145030830462079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bacteria01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
