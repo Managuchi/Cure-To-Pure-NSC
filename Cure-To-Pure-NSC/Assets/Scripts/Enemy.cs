@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 10;
-    public int damage = 5;
+    public int damage = 1;
 
     private void Update()
     {

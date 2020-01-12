@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int health = 10;
+    public int totalHealth = 8;
+    public int health = 8;
 
     public event System.Action OnPlayerDied;
 
