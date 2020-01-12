@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float speed = 3f;
     public float lifeTime = 3f;
 
-    public float distance = 0.5f;
+    public float distance = 0.1f;
     public LayerMask whatIsSolid;
 
     private void Start()
@@ -18,9 +18,10 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        Debug.DrawLine(transform.position, Vector2.right * 100);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
             if (hitInfo.collider.CompareTag("Enemy"))
