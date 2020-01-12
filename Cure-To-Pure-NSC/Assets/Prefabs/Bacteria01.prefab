@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70be7db3f3154fb4483004e2ee8f1064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 5156013805891274846, guid: 94b190b6000afde4aa53021a9f9d95bf,
+    type: 3}
   health: 10
   damage: 1
 --- !u!58 &7258145030830462019
@@ -126,7 +128,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 2
-  m_AngularDrag: 10
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
