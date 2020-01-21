@@ -7,8 +7,8 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public float timeBtwShots = 0.5f;
-    public float startTimeBtwShots;
+    float timeBtwShots;
+    public float startTimeBtwShots = 0.5f;
 
     private void Update()
     {
