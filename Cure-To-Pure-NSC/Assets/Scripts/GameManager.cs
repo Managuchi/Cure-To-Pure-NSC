@@ -5,11 +5,5 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerer : MonoBehaviour
 {
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-
-        }
-    }
+    
 }

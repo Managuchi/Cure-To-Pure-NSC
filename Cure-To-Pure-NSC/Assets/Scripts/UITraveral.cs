@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UITraveral : MonoBehaviour
+public static class UITraveral
 {
-    public void LoadLevelSelectorScene()
+    public static void LoadLevelSelectorScene()
     {
         SceneManager.LoadScene("LevelSelector");
     }
 
-    public void LoadAboutScene()
+    public static void LoadAboutScene()
     {
         SceneManager.LoadScene("About");
     }
 
-    public void LoadMainMenuScene()
+    public static void LoadMainMenuScene()
     {
         SceneManager.LoadScene("Home");
     }
 
-    public void LoadScene(string sceneName)
+    public static void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
