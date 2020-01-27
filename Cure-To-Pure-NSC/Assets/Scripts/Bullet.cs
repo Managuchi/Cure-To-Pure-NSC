@@ -20,10 +20,11 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        Debug.DrawLine(transform.position, Vector2.right * 100);
+        Debug.DrawLine(transform.position, transform.right * 100);
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
+            Debug.Log(hitInfo.collider.name);
             if (hitInfo.collider.CompareTag("Enemy"))
             {
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);

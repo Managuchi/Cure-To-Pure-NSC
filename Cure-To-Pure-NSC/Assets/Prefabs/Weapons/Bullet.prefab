@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3164026726659533934}
   - component: {fileID: 3164026726659533935}
   - component: {fileID: 459312289047418034}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   damage: 2
   speed: 3
   lifeTime: 6
-  distance: 0.5
+  distance: 0.1
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 307
