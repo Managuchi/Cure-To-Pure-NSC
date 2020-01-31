@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed;
+    float moveSmooth = .3f;
+
+    Vector2 desiredVelocity;
     Vector2 velocity;
     Rigidbody2D rb;
 
@@ -35,7 +38,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        velocity = input.normalized * speed;
+        desiredVelocity = input.normalized * speed;
 
         if (dashTime <= 0f)
         {
@@ -48,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        rb.velocity = Vector2.SmoothDamp(rb.velocity, desiredVelocity, ref velocity, moveSmooth);
     }
 
     private void Flip()
